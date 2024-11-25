@@ -5,9 +5,9 @@
 
 * {
   box-sizing: border-box;
-  color: yellow;
   text-decoration: none;
   outline: none;
+  border: none;
 }
 
 html {
@@ -17,8 +17,6 @@ html {
 .container {
   width: 90%;
   margin-inline: auto;
-
-  border: 1px solid blue;
 
   @include desktop-screen {
     width: 940px;
