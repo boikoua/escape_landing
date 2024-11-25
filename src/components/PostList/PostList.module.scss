@@ -1,0 +1,15 @@
+@use './../../styles/variables.scss' as *;
+@use './../../styles/mixins.scss' as *;
+
+.posts {
+  padding-block: 30px 40px;
+  background-color: $posts-bg-color;
+
+  @include tablet-screen {
+    padding-block: 40px 60px;
+  }
+
+  @include desktop-screen {
+    padding-block: 60px 80px;
+  }
+}

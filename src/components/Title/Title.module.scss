@@ -1,0 +1,16 @@
+@use './../../styles/variables.scss' as *;
+
+.title {
+  margin-bottom: 20px;
+  margin-inline: auto;
+  padding-bottom: 20px;
+  min-width: 190px;
+  width: fit-content;
+  color: $subtitle-color;
+  font-family: Oxygen;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  text-align: center;
+  border-bottom: 1px solid $subtitle-color-line;
+}

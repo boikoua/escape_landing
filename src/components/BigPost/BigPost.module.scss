@@ -1,0 +1,57 @@
+@use './../../styles/variables.scss' as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+  padding: 20px;
+  height: 260px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: $main-color;
+  font-size: 27px;
+  line-height: 30px;
+}
+
+.text {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Oxygen;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  gap: 10px;
+}
+
+.photo {
+  width: 26px;
+  height: 26px;
+}
+
+.name {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Oxygen;
+  font-size: 12px;
+  line-height: 35px;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 35px;
+}

@@ -1,0 +1,42 @@
+@use './../../styles/variables.scss' as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  padding: 14px 14px 28px 14px;
+  border-bottom: 1px solid $post-color-line;
+}
+
+.title {
+  margin-bottom: 10px;
+  color: $post-title-color;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.text {
+  color: $post-text-color;
+  font-family: Oxygen;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.photo {
+}
