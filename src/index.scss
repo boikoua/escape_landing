@@ -1,0 +1,31 @@
+@use './styles/reset' as *;
+@use './styles/fonts' as *;
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+* {
+  box-sizing: border-box;
+  color: yellow;
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  font-family: Lora;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+
+  border: 1px solid blue;
+
+  @include desktop-screen {
+    width: 940px;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}

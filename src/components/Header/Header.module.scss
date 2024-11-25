@@ -1,0 +1,16 @@
+@use './../../styles/variables.scss' as *;
+
+.header {
+  padding-top: 20px;
+  height: 500px;
+  background-image: url('./../../../public/img/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

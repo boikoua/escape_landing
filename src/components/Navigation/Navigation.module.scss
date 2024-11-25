@@ -1,0 +1,33 @@
+@use './../../styles/variables.scss' as *;
+@use './../../styles/mixins.scss' as *;
+
+.burger {
+  width: 28px;
+  cursor: pointer;
+
+  @include tablet-screen {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include tablet-screen {
+    display: block;
+  }
+}
+
+.items {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  color: $main-color;
+  font-family: Oxygen;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
