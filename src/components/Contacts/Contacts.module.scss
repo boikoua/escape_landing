@@ -1,0 +1,10 @@
+@use './../../styles/variables.scss' as *;
+@use './../../styles/mixins.scss' as *;
+
+.contacts {
+  padding-block: 40px 50px;
+
+  @include desktop-screen {
+    padding-block: 80px 90px;
+  }
+}

@@ -1,0 +1,30 @@
+@use './../../styles/variables.scss' as *;
+@use './../../styles/mixins.scss' as *;
+
+.form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.input {
+  padding: 18px 30px;
+  color: $input-text-color;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: $input-bg-color;
+
+  @include tablet-screen {
+    width: 375px;
+  }
+}
+
+.button {
+  padding: 18px 25px;
+  color: $btn-text-color;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  background: rgba(255, 255, 255, 0.28);
+}
