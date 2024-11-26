@@ -5,7 +5,7 @@ const LittlePost = () => {
     <article className={style.post}>
       <img
         className={style.poster}
-        src="./public/img/little_post/1.png"
+        src="./src/img/little_post/1.png"
         alt="Poster"
       />
       <div className={style.content}>
@@ -18,7 +18,7 @@ const LittlePost = () => {
         <div className={style.author}>
           <img
             className={style.photo}
-            src="./public/img/little_post/author.png"
+            src="./src/img/little_post/author.png"
             alt="Photo"
           />
           <span className={style.name}>William Wong</span>

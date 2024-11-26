@@ -4,7 +4,7 @@ const BigPost = () => {
   return (
     <article
       className={style.post}
-      style={{ backgroundImage: 'url(./public/img/big_post/1.png)' }}
+      style={{ backgroundImage: 'url(./src/img/big_post/1.png)' }}
     >
       <h3 className={style.title}>The Road Ahead</h3>
       <p className={style.text}>
@@ -14,7 +14,7 @@ const BigPost = () => {
         <div className={style.author}>
           <img
             className={style.photo}
-            src="./public/img/big_post/author.png"
+            src="./src/img/big_post/author.png"
             alt="Photo"
           />
           <span className={style.name}>Mat Vogels</span>
