@@ -12,7 +12,11 @@ const Navigation = () => {
 
   return (
     <>
-      <img className={style.burger} src="./img/icons/burger.svg" alt="Menu" />
+      <img
+        className={style.burger}
+        src="./src/img/icons/burger.svg"
+        alt="Menu"
+      />
 
       <nav className={style.nav}>
         <ul className={style.items}>{showLinks}</ul>
