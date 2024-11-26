@@ -4,7 +4,7 @@ import style from './Contacts.module.scss';
 
 const Contacts = () => {
   return (
-    <section className={style.contacts}>
+    <section className={style.contacts} id="contact">
       <Title text="Stay in Touch" color="#EFEFEF" />
       <Form />
     </section>

@@ -1,0 +1,47 @@
+@use './../../styles/variables.scss' as *;
+
+.burger {
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $burger-menu-bg-color;
+  opacity: 0;
+  overflow: hidden;
+
+  transform: translateX(100%);
+  transition: all 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+.open {
+  opacity: 0.9;
+  transform: translateX(0);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+.close {
+  width: 28px;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.link {
+  font-size: 24px;
+  color: $main-color;
+  text-transform: uppercase;
+}

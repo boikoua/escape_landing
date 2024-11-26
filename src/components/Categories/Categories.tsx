@@ -11,7 +11,7 @@ const Categories = () => {
   ));
 
   return (
-    <section className={style.categories}>
+    <section className={style.categories} id="categories">
       <div className="container">
         <ul className={style.items}>{showCategories}</ul>
       </div>

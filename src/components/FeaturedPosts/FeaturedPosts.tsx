@@ -4,7 +4,7 @@ import style from './FeaturedPosts.module.scss';
 
 const FeaturedPosts = () => {
   return (
-    <section>
+    <section id="about">
       <Title text="Featured Posts" />
 
       <section className={style.posts}>

@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Logo: React.FC<Props> = ({ text }) => (
-  <a href="#" className={style.logo}>
+  <a href="#home" className={style.logo}>
     {text}
   </a>
 );
