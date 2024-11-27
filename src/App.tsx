@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import { Post } from './types/Posts';
 import posts from './api/posts.json';
+import ArrowUp from './components/ArrowUp';
 
 type EscapeContextType = {
   isOpen: boolean;
@@ -49,6 +50,7 @@ function App() {
       }}
     >
       <div className="app">
+        {!isOpen && <ArrowUp />}
         <BurgerMenu />
         <Header />
         <Main />

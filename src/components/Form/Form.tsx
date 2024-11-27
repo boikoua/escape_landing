@@ -2,7 +2,11 @@ import style from './Form.module.scss';
 
 const Form = () => {
   return (
-    <form className={style.form} action="">
+    <form
+      className={style.form}
+      action=""
+      onSubmit={(event) => event.preventDefault()}
+    >
       <input
         className={style.input}
         type="email"
