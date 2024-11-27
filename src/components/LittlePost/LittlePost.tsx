@@ -1,29 +1,31 @@
+import React from 'react';
+import { Post } from '../../types/Posts';
 import style from './LittlePost.module.scss';
 
-const LittlePost = () => {
+type Props = {
+  post: Post;
+};
+
+const LittlePost: React.FC<Props> = ({ post }) => {
+  const { image, title, content, authorPhoto, authorName, date } = post;
+
+  const prepareDate = date.split('-');
+
+  const showDate = `${prepareDate[2]}/${prepareDate[1]}/${prepareDate[0]}`;
+
   return (
     <article className={style.post}>
-      <img
-        className={style.poster}
-        src="./img/little_post/1.png"
-        alt="Poster"
-      />
+      <img className={style.poster} src={image} alt="Poster" />
       <div className={style.content}>
-        <h4 className={style.title}>Still Standing Tall</h4>
-        <p className={style.text}>
-          Life begins at the end of your comfort zone.
-        </p>
+        <h4 className={style.title}>{title}</h4>
+        <p className={style.text}>{content}</p>
       </div>
       <div className={style.info}>
         <div className={style.author}>
-          <img
-            className={style.photo}
-            src="./img/little_post/author.png"
-            alt="Photo"
-          />
-          <span className={style.name}>William Wong</span>
+          <img className={style.photo} src={authorPhoto} alt="Photo" />
+          <span className={style.name}>{authorName}</span>
         </div>
-        <span className={style.date}>9/25/2015</span>
+        <span className={style.date}>{showDate}</span>
       </div>
     </article>
   );

@@ -1,25 +1,34 @@
+import React from 'react';
+import { Post } from '../../types/Posts';
 import style from './BigPost.module.scss';
+import { month } from '../../api/month';
 
-const BigPost = () => {
+type Props = {
+  post: Post;
+};
+
+const BigPost: React.FC<Props> = ({ post }) => {
+  const { image, title, content, authorPhoto, authorName, date } = post;
+
+  const prepareDate = date.split('-').map((num) => +num);
+
+  const showDate = `${month[prepareDate[1] - 1]} ${prepareDate[2]}, ${
+    prepareDate[0]
+  }`;
+
   return (
     <article
       className={style.post}
-      style={{ backgroundImage: 'url(./img/big_post/1.png)' }}
+      style={{ backgroundImage: `url(${image})` }}
     >
-      <h3 className={style.title}>The Road Ahead</h3>
-      <p className={style.text}>
-        The road ahead might be paved - it might not be.
-      </p>
+      <h3 className={style.title}>{title}</h3>
+      <p className={style.text}>{content}</p>
       <div className={style.info}>
         <div className={style.author}>
-          <img
-            className={style.photo}
-            src="./img/big_post/author.png"
-            alt="Photo"
-          />
-          <span className={style.name}>Mat Vogels</span>
+          <img className={style.photo} src={authorPhoto} alt="Photo" />
+          <span className={style.name}>{authorName}</span>
         </div>
-        <span className={style.date}>September 25, 2015</span>
+        <span className={style.date}>{showDate}</span>
       </div>
     </article>
   );

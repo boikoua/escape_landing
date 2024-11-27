@@ -1,16 +1,25 @@
+import { useContext } from 'react';
 import { navigationLinks } from '../../api/navigationLinks';
 import Logo from '../Logo';
 import style from './BurgerMenu.module.scss';
+import { EscapeContext } from '../../App';
 
-type Props = {
-  isOpen: boolean;
-  onOpen: () => void;
-};
+const BurgerMenu = () => {
+  const context = useContext(EscapeContext);
 
-const BurgerMenu: React.FC<Props> = ({ isOpen, onOpen }) => {
+  if (!context) {
+    return null;
+  }
+
+  const { isOpen, setIsOpen } = context;
+
   const showLinks = navigationLinks.map((link) => (
     <li key={link.id} className={style.item}>
-      <a className={style.link} href={`#${link.title}`} onClick={onOpen}>
+      <a
+        className={style.link}
+        href={`#${link.title}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {link.title}
       </a>
     </li>
@@ -26,7 +35,7 @@ const BurgerMenu: React.FC<Props> = ({ isOpen, onOpen }) => {
             className={style.close}
             src="./img/icons/close.svg"
             alt="Menu"
-            onClick={onOpen}
+            onClick={() => setIsOpen(!isOpen)}
           />
         </div>
 
