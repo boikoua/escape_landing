@@ -2,13 +2,14 @@ import React from 'react';
 import { Post } from '../../types/Posts';
 import style from './BigPost.module.scss';
 import { month } from '../../api/month';
+import { Link } from 'react-router-dom';
 
 type Props = {
   post: Post;
 };
 
 const BigPost: React.FC<Props> = ({ post }) => {
-  const { image, title, content, authorPhoto, authorName, date } = post;
+  const { id, image, title, content, authorPhoto, authorName, date } = post;
 
   const prepareDate = date.split('-').map((num) => +num);
 
@@ -17,7 +18,8 @@ const BigPost: React.FC<Props> = ({ post }) => {
   }`;
 
   return (
-    <article
+    <Link
+      to={`/${id}`}
       className={style.post}
       style={{ backgroundImage: `url(${image})` }}
     >
@@ -30,7 +32,7 @@ const BigPost: React.FC<Props> = ({ post }) => {
         </div>
         <span className={style.date}>{showDate}</span>
       </div>
-    </article>
+    </Link>
   );
 };
 

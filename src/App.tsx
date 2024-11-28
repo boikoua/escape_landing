@@ -7,6 +7,8 @@ import Main from './components/Main';
 import { Post } from './types/Posts';
 import posts from './api/posts.json';
 import ArrowUp from './components/ArrowUp';
+import { Route, Routes } from 'react-router-dom';
+import PostDetails from './components/PostDetails';
 
 type EscapeContextType = {
   isOpen: boolean;
@@ -55,6 +57,9 @@ function App() {
         <Header />
         <Main />
         <Footer />
+        <Routes>
+          <Route path="/:id" element={<PostDetails posts={filteringPosts} />} />
+        </Routes>
       </div>
     </EscapeContext.Provider>
   );
